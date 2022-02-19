@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Ionic.Zip;
 using Ionic.Zlib;
 using Newtonsoft.Json;
+using TTSlotMaker.Properties;
 
 namespace TTSlotMaker
 {
@@ -55,7 +56,7 @@ namespace TTSlotMaker
             int selectedRace = SelectedRace;
             int selectedType = SubType;
             string selectedSlot = SlotName;
-            using (ZipFile zip = new(Program.ModPackPath))
+            using (ZipFile zip = ZipFile.Read(new MemoryStream(Resources.Modpack)))
             {
                 ZipEntry mpl = zip.Entries.First(x => x.FileName.EndsWith(".mpl"));
                 ModPackJson jsonData;

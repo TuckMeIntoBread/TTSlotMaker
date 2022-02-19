@@ -8,8 +8,6 @@ namespace TTSlotMaker
     {
         public static string BasePath => AppDomain.CurrentDomain.BaseDirectory;
 
-        public static string ModPackPath => Path.Combine(BasePath, "Base.modpack");
-
         public static string SavedPath => Path.Combine(BasePath, "Base_Modpack.ttmp2");
 
         /// <summary>
