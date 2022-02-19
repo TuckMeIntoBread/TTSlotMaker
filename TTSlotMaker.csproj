@@ -6,6 +6,29 @@
         <Nullable>enable</Nullable>
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>enable</ImplicitUsings>
+        <!-- 
+        Turns off reference assembly generation 
+        See: https://docs.microsoft.com/en-us/dotnet/standard/assembly/reference-assemblies
+        -->
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
     </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <PlatformTarget>x64</PlatformTarget>
+      <Optimize>false</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ModPack.resx" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ModPack.Designer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="FodyWeavers.xml" />
+      <None Remove="Base_Modpack.ttmp2" />
+    </ItemGroup>
 
 </Project>
