@@ -1,10 +1,17 @@
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace TTSlotMaker
 {
     static class Program
     {
+        public static string BasePath => AppDomain.CurrentDomain.BaseDirectory;
+
+        public static string ModPackPath => Path.Combine(BasePath, "Base.modpack");
+
+        public static string SavedPath => Path.Combine(BasePath, "Base_Modpack.ttmp2");
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
