@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SlotMakerForm));
             this.cBoxRace = new System.Windows.Forms.ComboBox();
             this.numType = new System.Windows.Forms.NumericUpDown();
             this.txtSlot = new System.Windows.Forms.TextBox();
@@ -130,6 +131,7 @@
             this.Controls.Add(this.gBoxSlot);
             this.Controls.Add(this.gBoxType);
             this.Controls.Add(this.gBoxRace);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SlotMakerForm";
