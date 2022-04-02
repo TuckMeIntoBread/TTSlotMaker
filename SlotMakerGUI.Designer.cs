@@ -63,6 +63,11 @@
             this.numType.Name = "numType";
             this.numType.Size = new System.Drawing.Size(195, 23);
             this.numType.TabIndex = 1;
+            this.numType.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtSlot
             // 

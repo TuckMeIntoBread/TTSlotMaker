@@ -71,7 +71,7 @@ namespace TTSlotMaker
                     modsJson.FullPath = $"chara/human/c{selectedRace.CodeToString()}/obj/body/b{selectedType.CodeToString()}/material/v0001/" +
                                         $"mt_c{selectedRace.CodeToString()}b{selectedType.CodeToString()}_{selectedSlot}.mtrl";
                 }
-                
+
                 zip.RemoveEntry(mpl);
                 zip.AddEntry(mpl.FileName, JsonConvert.SerializeObject(jsonData));
                 zip.AddEntry("CONVERTED.txt", "Converted using TT Slot Maker made by Bread and Bizu.");
